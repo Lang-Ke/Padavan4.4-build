@@ -43,7 +43,7 @@ jobs:
         mkdir -p /opt/images/
     - name: Build Firmware
       env:
-        TNAME: HC5962
+        TNAME: JCG-Q20
       run: |
         cd /opt/rt-n56u/trunk/user/smartdns
         wget $(curl -s https://api.github.com/repos/pymumu/smartdns/releases/latest|egrep -o 'http.+.tarball.+[0-9]') -O smartdns.tar.gz && mkdir smartdns-ba282c8 && tar -xzvf smartdns.tar.gz -C smartdns-ba282c8 --strip-components 1
